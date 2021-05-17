@@ -7,6 +7,9 @@ div:hover{
     
     
 }
+
+/* Me inspirei no código do colega Sílvio Fabian voltado para o uso do nth-child(). link: https://github.com/SilvioFabian1/trybe-exercises/blob/master/bloco_3/dia_3/style4.css */
+
 div:nth-child(3){
     background-color: rgb(43, 185, 241);
     border-color: #3a1988;
