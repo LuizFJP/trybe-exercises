@@ -1,16 +1,41 @@
-h1, p{
-    text-align: center;
-}
-
-li:hover{
-    transition: all;
-    background-color: rgb(122, 154, 223);
-}
-
-li:active{
+.super-mario {
+    position: absolute;
+    width: 150px;
+    z-index: 0;
+    top: 60px;
     
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+  
+}
+.goomba{
+    
+    position: absolute;
+    width: 75px;
+    margin-left: 50px;
+    z-index: 1;
+    top: 255px;
+    
+   
+}
+.bowser{
+    position: absolute;
+    width: 350px;
+    top: 0px;
+    right: 50px;
+    z-index: 2;
+}
 
-ol, ul{
-    list-style: none;
+.baloon{
+    width: 250px;
+    position: absolute;
+    right: 400px;
+    top: 10px;
+    z-index: 3;
+}
+
+.word{
+
+    position: absolute;
+    top: 50px;
+    right: 450px;
+    z-index: 4;
 }
