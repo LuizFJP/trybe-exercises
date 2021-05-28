@@ -15,9 +15,14 @@ const thirdElement = whereYouAre.nextElementSibling;
 const thirdElementByDad = dad.lastElementChild.previousElementSibling;
 
 //crie um irmão p/ 'elementoOndeVoceEsta'
-const father = getElementById('pai');
+const father = document.getElementById('pai');
 const whereYouAreBrother = document.createElement('div');
 whereYouAreBrother.id = "whereYouAreBrother"
 father.appendChild(whereYouAreBrother);
+
+//Crie um filho p/ elementoOndeVoceEsta
+const whereYouAreSon = document.createElement('div')
+whereYouAreSon.id = "terceiroFilhoDoFilho";
+whereYouAre.appendChild(whereYouAreSon);
 
 
