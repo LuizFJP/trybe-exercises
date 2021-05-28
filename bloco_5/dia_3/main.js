@@ -21,11 +21,25 @@ input.addEventListener('keyup', shiftText);
  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 redirecione para alguma página;
 1. Que tal redirecionar para seu portifólio?
+*/
+
+function changeWebSite(){
+  document.location.href = "https://luizfjp.github.io/portfolioluizportela.github.io/";
+}
+myWebpage.addEventListener('dblclick', changeWebSite);
+/*
  Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 a cor do mesmo;
+*/
+function changeColorTitle(){
+	myWebpage.style.color = "#41197f";
+}
 
+myWebpage.addEventListener('mouseover',changeColorTitle);
+/*
 Segue abaixo um exemplo do uso de event.target:
 */
+
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
