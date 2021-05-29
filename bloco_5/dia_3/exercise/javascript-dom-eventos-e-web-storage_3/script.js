@@ -41,11 +41,11 @@ for(let index = 0; index < dezDaysList.length; index += 1){
   createLiTagChild();
 
   if(dezDaysList[index] == 24 || dezDaysList[index] == 25 || dezDaysList[index] == 31){
-    liTag.className = "day holiday";
+    liTag.className += " holiday";
     createLiTagChild();
 
   }if(dezDaysList[index] == 4 || dezDaysList[index] == 11 || dezDaysList[index] == 18 || dezDaysList[index] == 25){
-    liTag.className = "day friday";
+    liTag.className += " friday";
     createLiTagChild();
   }
 }
@@ -65,3 +65,24 @@ function holidayFunction(Feriados){
   divButton.appendChild(btn);
 }
 holidayFunction();
+
+/**Exercício 3:
+Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+*/
+
+function clickHoliday(){
+ 
+  let holidays = document.querySelectorAll(".holiday");
+
+  for(let index = 0; index < holidays.length; index+=1){
+    if (holidays[index].style.backgroundColor === "white"){
+      holidays[index].style.backgroundColor = "rgb(238,238,238)";
+    }else{   
+      console.log('teste');
+      holidays[index].style.backgroundColor = "white";
+    }
+  }
+}
+
+document.getElementById("btn-holiday").addEventListener('click',clickHoliday);
