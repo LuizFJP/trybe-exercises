@@ -51,7 +51,7 @@ const customerInfo = (order) => {
 
 }
 
-customerInfo(order);
+//customerInfo(order);
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
@@ -59,8 +59,8 @@ const orderModifier = (order) => {
   console.log(order);
 }
 
-orderModifier(order);
-
+//orderModifier(order);
+//--------------------------------------
 const lesson1 = {
   materia: 'Matemática',
   numeroEstudantes: 20,
@@ -80,4 +80,50 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+/**Crie uma função para adicionar o turno da manhã na lesson2 . Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
+Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
+Crie uma função para mostrar o tamanho de um objeto.
+Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
+Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte: */
+
+function addLesson2() {
+  lesson2['turno'] = 'manhã'
+  console.log(lesson2);
+}
+//addLesson2();
+
+const objectKeys = () => console.log(Object.keys(lesson2));
+//objectKeys();
+
+const lengthObject = () => console.log(Object.keys(lesson2).length);
+//lengthObject();
+
+const objectValues = () => console.log(Object.values(lesson2));
+//objectValues();
+
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+//console.log(allLessons);
+
+const numberStudents = () => console.log(parseInt(allLessons.lesson1.numeroEstudantes) + parseInt(allLessons.lesson2.numeroEstudantes) + parseInt(allLessons.lesson3.numeroEstudantes));
+//numberStudents();
+
+const valuePosition = (obj, key) => console.log(`Output: ${Object.values(obj)[key]}`);
+//valuePosition(lesson1, 0);
+
+const compareKeyValue = (obj,keyO, value) => {
+ 
+  let valuesObj = Object.values(obj);
+  let keyObj = Object.keys(obj);
+  for(let key in valuesObj){
+    if(keyObj[key] == keyO && valuesObj[key] == value){
+      return true
+    }
+  }
+};
+
+console.log(compareKeyValue(lesson3, 'turno', 'noite'));
+
+
+
+
 
