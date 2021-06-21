@@ -30,7 +30,9 @@ function myRemove(arr, item) {
 }
 
 // implemente seus testes aqui
-assert.strictEqual(myRemove([1, 2, 3, 4], 3)[1, 2, 4]);
+assert.strictEqual(myRemove([1, 2, 3, 4], 3) [1, 2, 4]);
+//assert.notStrictEqual(myRemove([1, 2, 3, 4], 5) [1, 2, 3, 4]);
+assert.strictEqual(myRemove([1, 2, 3, 4], 5) [1, 2, 3, 4]);
 
 // A função myRemove(arr, item) recebe um array arr e retorna uma cópia desse array sem o elemento item caso ele exista no array
 // Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
@@ -38,4 +40,18 @@ assert.strictEqual(myRemove([1, 2, 3, 4], 3)[1, 2, 4]);
 // Verifique se o array passado por parâmetro não sofreu alterações
 // Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
 
+const assert = require('assert');
 
+function myRemoveWithoutCopy(arr, item) {
+  for (let index = 0, len = arr.length; index < len; index += 1) {
+    if (arr[index] === item) {
+      arr.splice(index, 1);
+      index -= 1;
+      len -= 1;
+    }
+  }
+
+  return arr;
+}
+
+// implemente seus testes aqui
