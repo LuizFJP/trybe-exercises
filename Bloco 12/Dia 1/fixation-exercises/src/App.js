@@ -2,25 +2,32 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function im() {
-  console.log("I'm");
-}
-
-function learning() {
-  console.log('learning');
-}
-
-function react() {
-  console.log('React');
-}
-
 class App extends Component {
+  constructor() {
+    super()
+    this.im = this.im.bind(this);
+    this.learning = this.learning.bind(this);
+    this.react = this.react.bind(this);
+  }
+
+  im() {
+    console.log("I'm");
+  }
+
+  learning() {
+    console.log('learning');
+  }
+
+  react() {
+    console.log('React');
+  }
+
   render () {
     return(
       <div>
-        <button onClick = {im}>I'm</button>
-        <button onClick = {learning}>Learning</button>
-        <button onClick = {react}>React</button>
+        <button onClick = {this.im}>I'm</button>
+        <button onClick = {this.learning}>Learning</button>
+        <button onClick = {this.react}>React</button>
       </div>
       );
   }
