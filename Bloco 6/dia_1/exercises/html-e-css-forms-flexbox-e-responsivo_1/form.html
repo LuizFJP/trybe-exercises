@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Exercise</title>
+</head>
+<body>
+  <main>
+    <form action="" method = "GET">
+      <label for="userName"> Nome
+        <input type="text" name = "name" maxlength = "40" id = "userName" required>
+      </label>
+      <div>
+      <label for="emailUser"> Email
+        <input type="text" name = "email" maxlength = "50" id = "emailUser" required>
+      </label>
+    </div>
+    <div>
+      <label for="cpfUser"> CPF
+        <input type="text" name = "cpf" maxlength="11" id = "cpfUser" required>
+      </label>
+    </div>
+    <div>
+      <label for="addressUser"> Endereço
+        <select name="address" id="addressUser" required>       
+        </select>
+      </label>
+    </div>
+    <div>
+      <label for="house"> 
+        <input type="radio" name = "addressHome" id = "house" required> Casa
+      </label>
+      <label for="apartment">
+        <input type="radio" name = 'addressHome' id = "apartment" required> Apartamento
+      </label>        
+    </div>  
+    </form>
+  </main>
+  <script src = "script.js"></script>
+</body>
+</html>
