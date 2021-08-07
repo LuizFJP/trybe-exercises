@@ -33,9 +33,12 @@
 
         const changeTextToUpperCase = () => {
           const textToUpperCase = document.querySelectorAll('.text, #paragraph, .title');
-          console.log(textToUpperCase);
-          textToUpperCase.forEach((text) => text.innerText = text.innerText.toUpperCase())
+          textToUpperCase.forEach((text) => text.innerText = text.innerText.toUpperCase());
+        }
 
+        const showInConsole = () => {
+          const toShowParagraphs = document.querySelectorAll('.text, #paragraph, .title');
+          toShowParagraphs.forEach((text) => console.log(text.innerText));
         }
 
         changeText();
@@ -43,3 +46,4 @@
         changeSquareToWhite();
         correction();
         changeTextToUpperCase();
+        showInConsole();
