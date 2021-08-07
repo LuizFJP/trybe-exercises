@@ -18,8 +18,14 @@
 
         const changeSquare = () => {
           const greenSquare = document.querySelector(".main-content");
-          greenSquare.style.backgroundColor = 'rgb(76,164,109)'
+          greenSquare.style.backgroundColor = 'rgb(76,164,109)';
+        }
+
+        const changeSquareToWhite = () => {
+          const whiteSquare = document.querySelector(".center-content");
+          whiteSquare.style.backgroundColor = 'white';
         }
 
         changeText();
         changeSquare();
+        changeSquareToWhite();
