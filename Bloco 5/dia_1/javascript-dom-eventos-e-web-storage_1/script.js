@@ -26,6 +26,13 @@
           whiteSquare.style.backgroundColor = 'white';
         }
 
+        const correction = () => {
+          const correctedTitle = document.querySelector('.title');
+          correctedTitle.innerText = 'Exercício 5.1 - JavaScript'
+        }
+
         changeText();
         changeSquare();
         changeSquareToWhite();
+        correction();
+
