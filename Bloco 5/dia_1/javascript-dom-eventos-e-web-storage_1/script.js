@@ -31,8 +31,15 @@
           correctedTitle.innerText = 'Exercício 5.1 - JavaScript'
         }
 
+        const changeTextToUpperCase = () => {
+          const textToUpperCase = document.querySelectorAll('.text, #paragraph, .title');
+          console.log(textToUpperCase);
+          textToUpperCase.forEach((text) => text.innerText = text.innerText.toUpperCase())
+
+        }
+
         changeText();
         changeSquare();
         changeSquareToWhite();
         correction();
-
+        changeTextToUpperCase();
