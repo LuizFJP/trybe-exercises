@@ -1,3 +1,6 @@
+const feriados = 'Feriados';
+const friday = 'Sexta-feira';
+
 const createNumberDays = () => {
   const dezDaysList = [ 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ];
   const days = document.querySelector('#days');
@@ -27,12 +30,11 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-const feriados = 'Feriados';
 const addHoliday = (feriados) => {
-  const buttonFriday = document.createElement('button');
-  buttonFriday.id = 'btn-holiday';
-  buttonFriday.innerText = feriados;
-  document.querySelector('.buttons-container').appendChild(buttonFriday);
+  const buttonHoliday = document.createElement('button');
+  buttonHoliday.id = 'btn-holiday';
+  buttonHoliday.innerText = feriados;
+  document.querySelector('.buttons-container').appendChild(buttonHoliday);
 }
 
 addHoliday(feriados);
@@ -42,3 +44,12 @@ document.querySelector('#btn-holiday').addEventListener('click', () => {
   console.log(holidaysGreen);
   holidaysGreen.forEach((day) => day.style.backgroundColor = 'rgb(238,238,238)');
 })
+
+const addFriday = (friday) => {
+  const buttonFriday = document.createElement('button');
+  buttonFriday.id = 'btn-friday';
+  buttonFriday.innerText = friday;
+  document.querySelector('.buttons-container').appendChild(buttonFriday);
+}
+
+addFriday(friday);
