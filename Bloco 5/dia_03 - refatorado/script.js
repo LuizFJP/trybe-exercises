@@ -41,9 +41,10 @@ addHoliday(feriados);
 
 document.querySelector('#btn-holiday').addEventListener('click', () => {
   const holidaysGreen = document.querySelectorAll('.holiday');
-  console.log(holidaysGreen);
-  holidaysGreen.forEach((day) => day.style.backgroundColor = 'rgb(238,238,238)');
-})
+  holidaysGreen[0].style.backgroundColor !== 'rgb(33, 137, 126)'
+  ? holidaysGreen.forEach((day) => day.style.backgroundColor = 'rgb(33, 137, 126)')
+  : holidaysGreen.forEach((day) => day.style.backgroundColor = 'rgb(238, 238, 238)');
+});
 
 const addFriday = (friday) => {
   const buttonFriday = document.createElement('button');
@@ -53,3 +54,11 @@ const addFriday = (friday) => {
 }
 
 addFriday(friday);
+
+document.querySelector('#btn-friday').addEventListener('click', () => {
+  const days = [4, 11, 18, 25];
+  const fridayDays = document.querySelectorAll('.friday');
+  fridayDays[0].innerText === 'SEXTOU o/'
+  ? fridayDays.forEach((day, index) => day.innerText = days[index])
+  : fridayDays.forEach((day) => day.innerText = 'SEXTOU o/');
+});
