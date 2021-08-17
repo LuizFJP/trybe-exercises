@@ -62,3 +62,15 @@ document.querySelector('#btn-friday').addEventListener('click', () => {
   ? fridayDays.forEach((day, index) => day.innerText = days[index])
   : fridayDays.forEach((day) => day.innerText = 'SEXTOU o/');
 });
+
+const increaseSize = (e) => {
+  e.target.style.fontSize = '27px';
+}
+
+document.querySelector('#days').addEventListener('mouseover', increaseSize, false);
+
+const lowSize = (e) => {
+  e.target.style.fontSize = '20px';
+}
+
+document.querySelector('#days').addEventListener('mouseout', lowSize, false);
