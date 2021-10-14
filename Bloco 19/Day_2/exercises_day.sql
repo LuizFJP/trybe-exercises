@@ -8,3 +8,4 @@ SELECT Name FROM Scientists ORDER BY Scientists.Name ASC;
 SELECT Name FROM Projects ORDER BY Name DESC;
 SELECT CONCAT('O projeto ', Name, ' precisou de ' ,Hours, ' horas para ser concluído') FROM Projects;
 SELECT Name, Hours FROM Projects ORDER BY Hours DESC;
+SELECT DISTINCT Scientist FROM AssignedTo;
