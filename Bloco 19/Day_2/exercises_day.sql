@@ -6,3 +6,4 @@ SELECT * FROM Scientists;
 SELECT Projects.Name, Hours FROM Projects;
 SELECT Name FROM Scientists ORDER BY Scientists.Name ASC; 
 SELECT Name FROM Projects ORDER BY Name DESC;
+SELECT CONCAT('O projeto ', Name, ' precisou de ' ,Hours, ' horas para ser concluído') FROM Projects;
