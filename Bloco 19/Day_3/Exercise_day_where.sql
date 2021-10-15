@@ -14,3 +14,6 @@ title ASC;
 SELECT COUNT(customer_id) FROM customer
 WHERE active is TRUE
 AND store_id = 1;
+SELECT * FROM customer
+WHERE active is FALSE
+AND store_id = 1;
