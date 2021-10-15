@@ -11,3 +11,6 @@ WHERE NOT rating = 'NC-17'
 AND replacement_cost >= 18 
 ORDER BY replacement_cost DESC,
 title ASC;
+SELECT COUNT(customer_id) FROM customer
+WHERE active is TRUE
+AND store_id = 1;
