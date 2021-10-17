@@ -12,3 +12,5 @@ MINUTE(rental_date) AS Minutos,
 SECOND(rental_date) AS Segundos
 FROM rental
 WHERE rental_id = 10330;
+SELECT * FROM payment
+WHERE payment_date LIKE '2005-07-28 22%';
