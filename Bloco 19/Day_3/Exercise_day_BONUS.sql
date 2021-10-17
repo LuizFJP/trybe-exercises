@@ -12,3 +12,5 @@ SELECT * FROM Projects
 WHERE Hours > 500;
 SELECT * FROM Projects
 WHERE Hours > 250 AND Hours < 800;
+SELECT Name, Code FROM Projects
+WHERE NOT Name LIKE 'A%';
