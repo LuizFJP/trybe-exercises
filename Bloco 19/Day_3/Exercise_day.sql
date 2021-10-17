@@ -9,3 +9,6 @@ SELECT * FROM Fornecedores
 WHERE name LIKE '%LTDA';
 SELECT COUNT(code) FROM Fornecedores
 WHERE code LIKE '%F%';
+SELECT * FROM Fornecimentos
+WHERE preco > 15 AND preco < 40
+ORDER BY preco ASC;
