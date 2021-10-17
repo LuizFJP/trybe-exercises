@@ -7,3 +7,5 @@ SELECT peca, preco, Fornecedor FROM Fornecimentos
 WHERE Fornecedor LIKE '%N%';
 SELECT * FROM Fornecedores
 WHERE name LIKE '%LTDA';
+SELECT COUNT(code) FROM Fornecedores
+WHERE code LIKE '%F%';
