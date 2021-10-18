@@ -7,4 +7,8 @@ VALUES
 INSERT INTO sakila.actor (first_name, last_name)
 SELECT first_name, last_name FROM customer
 LIMIT 5;
-SELECT * FROM category;
+INSERT INTO sakila.category (`name`)
+VALUES
+('Objects'),
+('Animals'),
+('Fun');
