@@ -12,3 +12,6 @@ VALUES
 ('Objects'),
 ('Animals'),
 ('Fun');
+INSERT INTO sakila.store (manager_staff_id, address_id)
+VALUES
+(4,3);
