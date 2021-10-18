@@ -4,3 +4,7 @@ INSERT INTO sakila.staff (first_name, last_name, address_id, store_id, `active`,
 VALUES 
 ('Bruno', 'Ramos', 3, 1, 1, 'brunoRamos@'),
 ('Maria', 'Angelica', 4, 2, 1, 'mariacraque');
+INSERT INTO sakila.actor (first_name, last_name)
+SELECT first_name, last_name FROM customer
+LIMIT 5;
+SELECT * FROM category;
