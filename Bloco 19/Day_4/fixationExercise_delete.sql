@@ -8,4 +8,5 @@ DELETE FROM actor
 WHERE first_name = 'MATTHEW';
 DELETE FROM film_text
 WHERE `description` LIKE '%saga%'; 
-SELECT * FROM film_text;
+TRUNCATE sakila.film_actor;
+TRUNCATE film_category;
