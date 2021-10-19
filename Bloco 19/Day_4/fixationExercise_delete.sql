@@ -10,3 +10,4 @@ DELETE FROM film_text
 WHERE `description` LIKE '%saga%'; 
 TRUNCATE sakila.film_actor;
 TRUNCATE film_category;
+DROP DATABASE sakila;
