@@ -3,3 +3,6 @@ SELECT IF(15 MOD 2 = 0, 'Par', 'Ímpar') AS `Par ou Ímpar`;
 
 -- Temos uma sala de cinema que comporta 220 pessoas. Quantos grupos completos de 12 pessoas podemos levar ao cinema sem que ninguém fique de fora?
 SELECT CONCAT(220 DIV 12, ' Grupos') AS `Número de Grupos`;
+
+-- Utilizando o resultado anterior, responda à seguinte pergunta: temos lugares sobrando? Se sim, quantos?
+SELECT CONCAT(220 MOD 12, ' Lugares sobrando') AS 'Lugares disponíveis';
