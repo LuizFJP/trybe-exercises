@@ -42,3 +42,10 @@ INNER JOIN payment p
 ON s.staff_id = p.staff_id 
 WHERE YEAR(p.payment_date) = 2006
 GROUP BY CONCAT(s.first_name, ' ', s.last_name);
+
+-- Monte uma query que exiba o id do ator , nome , id do filme e título do filme , usando as tabelas actor , film_actor e film . Dica: você precisará fazer mais de um JOIN na mesma query .
+SELECT a.actor_id, a.first_name, f.film_id, f.title 
+FROM film_actor fa
+INNER JOIN film f 
+INNER JOIN actor a
+ON fa.actor_id = a.actor_id AND f.film_id = fa.film_id;
