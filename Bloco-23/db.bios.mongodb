@@ -1,2 +1,2 @@
 use('bios')
-db.bios.find({_id: 8});
+db.bios.find({_id: 8}, {_id: true, name: true});
