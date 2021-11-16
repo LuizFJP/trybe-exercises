@@ -27,4 +27,6 @@ use('restaurants')
 
 // db.restaurants.count({rating: {$not: { $lte: 5}}});
 
-db.restaurants.count({ $or: [{rating: { $gte: 6}, borough: "Brooklyn"}]});
+// db.restaurants.count({ $or: [{rating: { $gte: 6}, borough: "Brooklyn"}]});
+
+db.restaurants.count({$and: [{$or: [{ borough: "Queens"}, { borough: "Staten Island"},{ borough: "Brooklyn"},]}]});
