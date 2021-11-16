@@ -11,5 +11,6 @@ use('restaurants')
 
 // db.restaurants.find({cuisine: { $nin: ['American']}}).count();
 
-db.restaurants.count({rating: {$gte: 8}});
+// db.restaurants.count({rating: {$gte: 8}});
 
+db.restaurants.count({rating: { $lt:  4}});
