@@ -20,8 +20,11 @@ use('filmes');
 
 // db.filmes.find({$and: [{diretor: 'Quentin Tarantino', "avaliacao.bom": {$in: [5,6,7,8,9,10]}}]});
 
-//db.filmes.find({$and: [{ano: 2014, "avaliacao.ruim": {$nin: [5,6,7,8,9,10]}}]})
+//db.filmes.find({$and: [{ano: 2014, "avaliacao.ruim": {$nin: [5,6,7,8,9,10]}}]});
 
 // db.filmes.find({$or: [{diretor: 'Christopher Nolan' }, {diretor: 'Peter Jackson'}]});
 
-db.filmes.find({$and: [{diretor: 'Steven Spielberg'}, {$nor: [{titulo: 'Indiana Jones'}, {titulo: 'Última Cruzada'}, {ano: 1989} ]}]});
+// db.filmes.find({$and: [{diretor: 'Steven Spielberg'}, {$nor: [{titulo: 'Indiana Jones'}, {titulo: 'Última Cruzada'}, {ano: 1989} ]}]});
+
+// db.filmes.insertOne({titulo: 'Um Lugar Silencioso 2'});
+
