@@ -28,3 +28,4 @@ use('filmes');
 
 // db.filmes.insertOne({titulo: 'Um Lugar Silencioso 2'});
 
+db.filmes.find({diretor: {$exists: false}});
