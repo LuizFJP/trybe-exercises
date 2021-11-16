@@ -32,4 +32,6 @@ use('filmes');
 
 // db.filmes.find({}, {"avaliacao.ruim": false, "avaliacao.medio": false}).sort({diretor: 1, titulo: 1, ano: -1});
 
-db.filmes.deleteMany({diretor: "Quentin Tarantino"});
+// db.filmes.deleteMany({diretor: "Quentin Tarantino"});
+
+// db.filmes.find({diretor: "Quentin Tarantino"});
