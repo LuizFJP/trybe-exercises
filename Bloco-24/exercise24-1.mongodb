@@ -20,4 +20,6 @@ use("filmesExercises");
 
 // db.filmesExercises.update({title: "Home Alone"}, {$currentDate: {lastUpdate: {$type: "timestamp"}}});
 
-db.filmesExercises.updateMany({}, {$set: {sequels: 0}});
+// db.filmesExercises.updateMany({}, {$set: {sequels: 0}});
+
+db.filmesExercises.updateMany({}, {$unset: {budget: "", estimatedBudget: ""}});
