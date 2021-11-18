@@ -14,4 +14,6 @@ use("filmesExercises");
 
 // db.filmesExercises.update({title: "Batman"}, {$rename: {budget: "estimatedBudget"}});
 
-db.filmesExercises.update({title: "Home Alone"}, {$min: {budget: 5}});
+// db.filmesExercises.update({title: "Home Alone"}, {$min: {budget: 5}});
+
+db.filmesExercises.updateMany({title: "Godzilla"}, {$max: {imdbRating: 8.6}},{$rename: {"adventure": "thriller"}});
