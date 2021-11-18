@@ -18,4 +18,6 @@ use("filmesExercises");
 
 // db.filmesExercises.updateMany({title: "Godzilla"}, {$max: {imdbRating: 8.6}},{$rename: {"adventure": "thriller"}});
 
-db.filmesExercises.update({title: "Home Alone"}, {$currentDate: {lastUpdate: {$type: "timestamp"}}});
+// db.filmesExercises.update({title: "Home Alone"}, {$currentDate: {lastUpdate: {$type: "timestamp"}}});
+
+db.filmesExercises.updateMany({}, {$set: {sequels: 0}});
