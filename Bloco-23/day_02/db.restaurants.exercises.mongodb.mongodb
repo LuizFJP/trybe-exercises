@@ -29,4 +29,8 @@ use('restaurants')
 
 // db.restaurants.count({ $or: [{rating: { $gte: 6}, borough: "Brooklyn"}]});
 
-db.restaurants.count({$and: [{$or: [{ borough: "Queens"}, { borough: "Staten Island"},{ borough: "Brooklyn"},]}]});
+// db.restaurants.count({$and: [{$or: [{ borough: "Queens"}, { borough: "Staten Island"},{ borough: "Brooklyn"},]}]});
+
+db.restaurants.count({$nor: [{rating: { $eq: 1}, cuisine: "American"}]});
+
+// db.restaurants.count({$or: [{$and:[{$or: [{rating: {$gt: 6}},{rating: {$lt: 10}}]},{borough: "Brooklyn"}]},cuisine: "Delicatessen"]});
