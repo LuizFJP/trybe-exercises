@@ -6,4 +6,6 @@ use("filmesExercises");
 
 // db.filmesExercises.updateMany({title: "Home Alone"}, {$set: {budget: 15, imdbRating: 5.5}});
 
-db.filmesExercises.update({title: "Batman"}, {$inc: {imdbRating: 2}});
+// db.filmesExercises.update({title: "Batman"}, {$inc: {imdbRating: 2}});
+
+db.filmesExercises.update({title: "Batman"}, {$mul: {imdbRating: 4}});
