@@ -8,4 +8,6 @@ use("filmesExercises");
 
 // db.filmesExercises.update({title: "Batman"}, {$inc: {imdbRating: 2}});
 
-db.filmesExercises.update({title: "Batman"}, {$mul: {imdbRating: 4}});
+db.filmesExercises.update({title: "Home Alone"}, {$inc: {budget: 5}});
+
+// db.filmesExercises.update({title: "Batman"}, {$mul: {imdbRating: 4}});
