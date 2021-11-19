@@ -19,5 +19,10 @@ use("filmesExercises");
 
 // Exercício 5: Remova o último elemento do array category do filme Batman .
 
-db.filmesExercises.updateOne({title: "Batman"}, {$pop: {category: 1}});
+// db.filmesExercises.updateOne({title: "Batman"}, {$pop: {category: 1}});
+
+// Exercício 6: Adicione o elemento "action" ao array category do filme Batman , garantindo que esse valor não se duplique.
+
+db.filmesExercises.updateOne({title: "Batman"}, {$addToSet: { category: "action"}});
+
 db.filmesExercises.find({title: "Batman"});
