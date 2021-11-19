@@ -7,6 +7,10 @@ use("filmesExercises");
 
 //Exercício 2: Utilizando o modificador $each , adicione as categorias "villain" e "comic-based" ao filme Batman .
 
-db.filmesExercises.updateOne({title: "Batman"}, {$push: {category: {$each: ["villain","comic-based"]}}});
+// db.filmesExercises.updateOne({title: "Batman"}, {$push: {category: {$each: ["villain","comic-based"]}}});
+
+//Exercício 3: Remova a categoria "action" do filme Batman .
+
+db.filmesExercises.updateOne({title: "Batman"}, {$pop: {category: -1}});
 
 db.filmesExercises.find({title: "Batman"});
