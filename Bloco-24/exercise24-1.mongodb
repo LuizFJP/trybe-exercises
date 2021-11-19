@@ -22,4 +22,6 @@ use("filmesExercises");
 
 // db.filmesExercises.updateMany({}, {$set: {sequels: 0}});
 
-db.filmesExercises.updateMany({}, {$unset: {budget: "", estimatedBudget: ""}});
+// db.filmesExercises.updateMany({}, {$unset: {budget: "", estimatedBudget: ""}});
+
+db.filmesExercises.updateMany({$or: [{title: "Batman"},{title: "Home Alone"}]}, {$min: {imdbRating: 17}});
