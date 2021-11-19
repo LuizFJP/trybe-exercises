@@ -1,0 +1,4 @@
+use("filmesExercises");
+db.filmesExercises.updateOne({title: "Batman"}, { $push: { category: "superhero"}});
+
+db.filmesExercises.find({title: "Batman"});
