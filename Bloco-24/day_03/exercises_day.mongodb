@@ -8,4 +8,8 @@ use("filmesExercises");
 
 // 3 - Adicione um array chamado ratings ao filme Batman com os seguintes valores: [85, 100, 102, 105] . Dica: lembre-se do operador $each visto no dia anterior.
 
-db.filmesExercises.updateOne({title: "Batman"}, {$push: {ratings: {$each: [85, 100, 102, 105]}}});
+// db.filmesExercises.updateOne({title: "Batman"}, {$push: {ratings: {$each: [85, 100, 102, 105]}}});
+
+// 4 - Adicione um array chamado ratings ao filme Godzilla com os seguintes valores: [78, 52, 95, 102] .
+
+db.filmesExercises.updateOne({title: "Godzilla"}, {$push: {ratings: {$each: [78, 52, 95, 102]}}});
