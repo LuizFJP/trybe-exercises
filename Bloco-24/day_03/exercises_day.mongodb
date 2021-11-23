@@ -48,4 +48,8 @@ use("filmesExercises");
 
 // 13 - Retorne os filmes da categoria "sci-fi" ou que possua o ratings maior do que 199 , exibindo apenas os campos title , ratings e category .
 
-db.filmesExercises.find({$or: [{category: "sci-fi"}, {ratings: {$gt: 199}}]}, {title: true, ratings: true, category: true, _id: false});
+// db.filmesExercises.find({$or: [{category: "sci-fi"}, {ratings: {$gt: 199}}]}, {title: true, ratings: true, category: true, _id: false});
+
+// 14 - Retorne os filmes em que o ratings possua tamanho 4 e que seja da category "adventure" ou "family" , mas que não tenha o imdbRating menor que 7.
+
+db.filmesExercises.find({$and: [{ratings: {$size: 4}}, {$or: [{category: "adventure"}, {category: "family"}]}, {imdbRating: {$gt: 7}}]});
