@@ -32,4 +32,8 @@ use("filmesExercises");
 
 // 9 - Retorne os filmes da categoria adventure e com ratings maior do que 103 , exibindo apenas os campos title , ratings e category .
 
-db.filmesExercises.find({$and:[{category:"adventure"}, {ratings: {$gt: 103}}]}, { title: true, ratings: true, category: true, _id: false});
+// db.filmesExercises.find({$and:[{category:"adventure"}, {ratings: {$gt: 103}}]}, { title: true, ratings: true, category: true, _id: false});
+
+// 10 - Retorne somente o título de todos os filmes com dois elementos no array category.
+
+db.filmesExercises.find({category: {$size: 2}}, {title: true, _id: false});
