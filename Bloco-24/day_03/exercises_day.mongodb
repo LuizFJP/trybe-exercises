@@ -44,4 +44,8 @@ use("filmesExercises");
 
 // 12 - Busque os filmes em que o módulo 5 do campo budget seja 0 e que o array category tenha tamanho 2 .
 
-db.filmesExercises.find({$and: [{budget: {$mod: [5, 0]}}, {category: { $size: 2}}]});
+// db.filmesExercises.find({$and: [{budget: {$mod: [5, 0]}}, {category: { $size: 2}}]});
+
+// 13 - Retorne os filmes da categoria "sci-fi" ou que possua o ratings maior do que 199 , exibindo apenas os campos title , ratings e category .
+
+db.filmesExercises.find({$or: [{category: "sci-fi"}, {ratings: {$gt: 199}}]}, {title: true, ratings: true, category: true, _id: false});
