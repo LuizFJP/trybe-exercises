@@ -25,3 +25,7 @@ use("filmesExercises");
 // 7 - Retorne todos os filmes com ratings entre 100 e 105 , exibindo apenas os campos title e ratings .
 
 // db.filmesExercises.find({ratings: {$elemMatch: {$gt: 100, $lt: 105}}}, {title: true, ratings: true,_id: false});
+
+// 8 - Retorne todos os filmes com ratings entre 64 e 105 e divisíveis por 9 , exibindo apenas os campos title e ratings .
+
+db.filmesExercises.find({$and: [{ratings: { $elemMatch: {$gt: 64, $lt: 105}}}, {ratings: {$mod: [9, 0]}}]});
