@@ -28,4 +28,8 @@ use("filmesExercises");
 
 // 8 - Retorne todos os filmes com ratings entre 64 e 105 e divisíveis por 9 , exibindo apenas os campos title e ratings .
 
-db.filmesExercises.find({$and: [{ratings: { $elemMatch: {$gt: 64, $lt: 105}}}, {ratings: {$mod: [9, 0]}}]});
+// db.filmesExercises.find({$and: [{ratings: { $elemMatch: {$gt: 64, $lt: 105}}}, {ratings: {$mod: [9, 0]}}]});
+
+// 9 - Retorne os filmes da categoria adventure e com ratings maior do que 103 , exibindo apenas os campos title , ratings e category .
+
+db.filmesExercises.find({$and:[{category:"adventure"}, {ratings: {$gt: 103}}]}, { title: true, ratings: true, category: true, _id: false});
