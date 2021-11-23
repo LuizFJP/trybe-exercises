@@ -84,6 +84,12 @@ use("filmesExercises");
 
 // db.filmesExercises.find({$text: {$search: "vacation"}});
 
-db.filmesExercises.find({$text: {$search:  "monstrous criminal"}});
+// 22 - Utilizando o operador $text , busque por filmes que contenham os termos "monstrous" ou "criminal" .
+
+// db.filmesExercises.find({$text: {$search:  "monstrous criminal"}});
+
+// 23 - Utilizando o operador $text , busque por filmes que contenham a frase "when he is accidentally" .
+
+db.filmesExercises.find({$text: {$search: "\"when he is accidentally\""}});
 
 // db.filmesExercises.find({title: "Godzilla"});
