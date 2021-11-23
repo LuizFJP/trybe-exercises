@@ -58,6 +58,10 @@ use("filmesExercises");
 
 // db.filmesExercises.updateOne({title: "Batman"},{$push: {description: "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker." }});
 
-db.filmesExercises.updateOne({title: "Batman"}, {$set: {description: "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker."}});
+// db.filmesExercises.updateOne({title: "Batman"}, {$set: {description: "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker."}});
 
-// db.filmesExercises.find({title: "Batman"});
+// 16 - Adicione o campo description no filme Godzilla com o seguinte valor: "The world is beset by the appearance of monstrous creatures, but one of them may be the only one who can save humanity." .
+
+db.filmesExercises.updateOne({title: "Godzilla"}, {$set: {description: "The world is beset by the appearance of monstrous creatures, but one of them may be the only one who can save humanity."}});
+
+// db.filmesExercises.find({title: "Godzilla"});
