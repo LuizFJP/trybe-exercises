@@ -1,0 +1,20 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imc": "node imc.js",
+    "velocity": "node velocity.js",
+    "sorteio": "node guessGame.js",
+    "fatorial": "node fatorial.js",
+    "fibonacci": "node fibonacci.js",
+    "start": "node index.js"
+  },
+  "author": "luiz_portela",
+  "license": "ISC",
+  "devDependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
