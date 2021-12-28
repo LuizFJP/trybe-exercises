@@ -99,3 +99,23 @@ function addCaracter() {
 }
 
 addCaracter();
+
+function replaceCaracter() {
+  fs.readFile('simpsonFamily.json', 'utf8')
+  .then((result) => {
+    console.log('\nExercício 4.6\n');
+    fs.writeFile('simpsonFamily.json', result.replace('8 - Nelson Muntz', '2 - Marge Simpson'), { flag: 'w' })
+    .then(() => {
+      console.log('Arquivo sobrescrito com sucesso!');
+    })
+    .catch((err) => {
+      console.log(`Erro ao sobrescrever o arquivo: ${ err.message }`);
+    })
+  }).catch((err) =>{
+    console.log('\nExercício 4.6\n');
+    console.log(`Erro ao substituir personagem: ${ err.message }`);
+  })
+}
+
+replaceCaracter();
+
