@@ -1,5 +1,9 @@
+const number1 = Math.floor(Math.random() * 100 + 1);
+const number2 = Math.floor(Math.random() * 100 + 1);
+const number3 = Math.floor(Math.random() * 100 + 1);
+
 // synchronous sintaxe
-function number(a, b, c) {
+function numberFunction(a, b, c) {
   if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
     throw new Error("Informe apenas números");
   } else {
@@ -11,7 +15,7 @@ function number(a, b, c) {
 }
 
 try {
-  const result = number(1, 1, 1);
+  const result = numberFunction(number1, number2, number3);
   console.log(`result: ${ result }`);
 } catch(e) {
   console.log(e.message);
@@ -30,16 +34,16 @@ function numberAsyncAwait(a, b, c) {
 }
 
 // async await sintaxe
-async function number2() {
+async function numberFunction2() {
   try {
-    const result = await numberAsyncAwait(6, 7, 9);
+    const result = await numberAsyncAwait(number1, number2, number3);
     console.log(`async/await result: ${ result }`);
   } catch(e) {
     console.log(e.message);
   }
 }
 
-number2();
+numberFunction2();
 
 // asynchronous sintaxe
 function asynchronousNumber(a, b, c) {
@@ -57,6 +61,6 @@ function asynchronousNumber(a, b, c) {
   return promise;
 }
 
-asynchronousNumber(2, 'a', 3)
+asynchronousNumber(number1, number2, number3)
   .then(result => console.log(`Sucesso: ${ result }`))
   .catch(err => console.log(`erro: ${err.message}`))
