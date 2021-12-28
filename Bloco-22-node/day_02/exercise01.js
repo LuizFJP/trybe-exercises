@@ -63,4 +63,4 @@ function asynchronousNumber(a, b, c) {
 
 asynchronousNumber(number1, number2, number3)
   .then(result => console.log(`Sucesso: ${ result }`))
-  .catch(err => console.log(`erro: ${err.message}`))
+  .catch(err => console.log(`erro: ${err.message}`));
