@@ -1,0 +1,27 @@
+use("filmesExercises");
+
+// db.filmesExercises.update({title: "Batman"}, {$set: { imdbRating: 7.7}});
+
+// db.filmesExercises.update({title: "Godzilla"}, { $set: {budget: 1}});
+
+// db.filmesExercises.updateMany({title: "Home Alone"}, {$set: {budget: 15, imdbRating: 5.5}});
+
+// db.filmesExercises.update({title: "Batman"}, {$inc: {imdbRating: 2}});
+
+// db.filmesExercises.update({title: "Home Alone"}, {$inc: {budget: 5}});
+
+// db.filmesExercises.update({title: "Batman"}, {$mul: {imdbRating: 4}});
+
+// db.filmesExercises.update({title: "Batman"}, {$rename: {budget: "estimatedBudget"}});
+
+// db.filmesExercises.update({title: "Home Alone"}, {$min: {budget: 5}});
+
+// db.filmesExercises.updateMany({title: "Godzilla"}, {$max: {imdbRating: 8.6}},{$rename: {"adventure": "thriller"}});
+
+// db.filmesExercises.update({title: "Home Alone"}, {$currentDate: {lastUpdate: {$type: "timestamp"}}});
+
+// db.filmesExercises.updateMany({}, {$set: {sequels: 0}});
+
+// db.filmesExercises.updateMany({}, {$unset: {budget: "", estimatedBudget: ""}});
+
+db.filmesExercises.updateMany({$or: [{title: "Batman"},{title: "Home Alone"}]}, {$min: {imdbRating: 17}});

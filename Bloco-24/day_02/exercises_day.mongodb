@@ -1,0 +1,44 @@
+use("filmesExercises");
+
+// Exercício 1: Adicione a categoria "superhero" ao filme Batman .
+// db.filmesExercises.updateOne({title: "Batman"}, { $push: { category: "superhero"}});
+
+// db.filmesExercises.find({title: "Batman"});
+
+//Exercício 2: Utilizando o modificador $each , adicione as categorias "villain" e "comic-based" ao filme Batman .
+
+// db.filmesExercises.updateOne({title: "Batman"}, {$push: {category: {$each: ["villain","comic-based"]}}});
+
+//Exercício 3: Remova a categoria "action" do filme Batman .
+
+// db.filmesExercises.updateOne({title: "Batman"}, {$pop: {category: -1}});
+
+// Exercício 4: Remova o primeiro elemento do array category do filme Batman .
+
+// db.filmesExercises.updateOne({title: "Batman"}, {$pop: {category: -1}});
+
+// Exercício 5: Remova o último elemento do array category do filme Batman .
+
+// db.filmesExercises.updateOne({title: "Batman"}, {$pop: {category: 1}});
+
+// Exercício 6: Adicione o elemento "action" ao array category do filme Batman , garantindo que esse valor não se duplique.
+
+// db.filmesExercises.updateOne({title: "Batman"}, {$addToSet: { category: "action"}});
+
+// db.filmesExercises.updateMany({title: {$in: ["Batman, Home Alone"]}}, {$push: {category: "90's"}});
+
+db.filmesExercises.updateOne({title: "Home Alone"}, {$addToSet: {cast: {
+  $each:[{
+  "actor": "Macaulay Culkin",
+  "character": "Kevin",
+},
+{
+  "actor": "Joe Pesci",
+  "character": "Harry",
+},
+{
+  "actor": "Daniel Stern",
+}]}}});
+
+
+db.filmesExercises.find({title: "Home Alone"});

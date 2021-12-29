@@ -1,0 +1,36 @@
+use('restaurants')
+
+/* 1 - Selecione e faça a contagem dos restaurantes presentes nos bairros Queens , Staten Island e Bronx . (utilizando o atributo borough )
+2 - Selecione e faça a contagem dos restaurantes que não possuem culinária do tipo American . (utilizando o atributo cuisine )
+3 - Selecione e faça a contagem dos restaurantes que possuem avaliação maior ou igual a 8 . (utilizando o atributo rating )
+4 - Selecione e faça a contagem dos restaurantes que possuem avaliação menor que 4 .
+5 - Selecione e faça a contagem dos restaurantes que não possuem as avaliações 5 , 6 e 7 .
+*/
+
+// db.restaurants.find({borough: { $in: ['Queens','Staten Island','Bronx']}}).count();
+
+// db.restaurants.find({cuisine: { $nin: ['American']}}).count();
+
+// db.restaurants.count({rating: {$gte: 8}});
+
+// db.restaurants.count({rating: { $lt:  4}});
+
+// db.restaurants.count({rating: { $nin: [5,6,7] } });
+
+/*
+1 - Selecione e faça a contagem dos restaurantes que não possuem avaliação menor ou igual a 5 , essa consulta também deve retornar restaurantes que não possuem o campo avaliação.
+2 - Selecione e faça a contagem dos restaurantes em que a avaliação seja maior ou igual a 6 , ou restaurantes localizados no bairro Brooklyn .
+3 - Selecione e faça a contagem dos restaurantes localizados nos bairros Queens , Staten Island e Brooklyn e possuem avaliação maior que 4 .
+4 - Selecione e faça a contagem dos restaurantes onde nem o campo avaliação seja igual a 1 , nem o campo culinária seja do tipo American .
+5 - Selecione e faça a contagem dos resturantes em que a avaliação seja maior que 6 ou menor que 10 , E esteja localizado no bairro Brooklyn OU não possuem culinária do tipo Delicatessen .
+ */
+
+// db.restaurants.count({rating: {$not: { $lte: 5}}});
+
+// db.restaurants.count({ $or: [{rating: { $gte: 6}, borough: "Brooklyn"}]});
+
+// db.restaurants.count({$and: [{$or: [{ borough: "Queens"}, { borough: "Staten Island"},{ borough: "Brooklyn"},]}]});
+
+db.restaurants.count({$nor: [{rating: { $eq: 1}, cuisine: "American"}]});
+
+// db.restaurants.count({$or: [{$and:[{$or: [{rating: {$gt: 6}},{rating: {$lt: 10}}]},{borough: "Brooklyn"}]},cuisine: "Delicatessen"]});
