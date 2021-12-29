@@ -25,20 +25,28 @@ use("filmesExercises");
 
 // db.filmesExercises.updateOne({title: "Batman"}, {$addToSet: { category: "action"}});
 
-// db.filmesExercises.updateMany({title: {$in: ["Batman, Home Alone"]}}, {$push: {category: "90's"}});
+// db.filmesExercises.updateMany({
+// $or: [
+// {title: "Batman"},
+// {title: "Home Alone"}
+// ]},
+// {$push: { category: "action"}}
+// );
 
-db.filmesExercises.updateOne({title: "Home Alone"}, {$addToSet: {cast: {
-  $each:[{
-  "actor": "Macaulay Culkin",
-  "character": "Kevin",
-},
-{
-  "actor": "Joe Pesci",
-  "character": "Harry",
-},
-{
-  "actor": "Daniel Stern",
-}]}}});
+db.filmesExercises.updateMany({$or: [{title: "Batman"}, {title: "Home Alone"}]}, {$push: { category: "action"}});
+
+// db.filmesExercises.updateOne({title: "Home Alone"}, {$addToSet: {cast: {
+//   $each:[{
+//   "actor": "Macaulay Culkin",
+//   "character": "Kevin",
+// },
+// {
+//   "actor": "Joe Pesci",
+//   "character": "Harry",
+// },
+// {
+//   "actor": "Daniel Stern",
+// }]}}});
 
 
-db.filmesExercises.find({title: "Home Alone"});
+db.filmesExercises.find({title: { $in: ["Batman", "Home Alone"]}});
