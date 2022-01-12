@@ -18,6 +18,14 @@ const drinks = [
   { id: 5, name: 'Cerveja Lata', price: 4.5 },
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
+
+app.get('/recipes/search', (req, res) => {
+  const {minPrice} = req.query;
+  const recipe = recipes.filter((recipe) => recipe.price >= parseInt(minPrice));
+  if (!recipe) return res.status(404).json({ message: 'Could\'nt find a recipe with this value'})
+  res.status(200).json(...recipe);
+});
+
 app.get('/drinks/:id', (req, res) => {
   const { id } = req.params;
   const drink = drinks.find((drink) => drink.id === parseInt(id));
