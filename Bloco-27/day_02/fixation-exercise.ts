@@ -1,7 +1,7 @@
 class Superclass {
   public isSuper: boolean = true;
 
-  protected sayHello() {
+  private sayHello() {
     console.log('Hello world!');
     
   }
