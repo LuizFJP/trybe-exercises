@@ -15,4 +15,13 @@ describe('Check if a number it\'s positive, negative or neutral', () => {
     expect(isNeutral).to.be.equals('neutro');
   })
 });
+
+describe('If the value is a number', () => {
+  const checkNumber = require('./exercise01')
+  it('was entered a number?', () =>{
+    const isNumber = checkNumber('1');
+    expect(isNumber).not.to.be.a(Number);
+    console.log("O valor deve ser um número");
+  })
+})
   
