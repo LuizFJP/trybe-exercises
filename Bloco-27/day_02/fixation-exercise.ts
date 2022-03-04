@@ -1,7 +1,7 @@
 class Superclass {
   public isSuper: boolean = true;
 
-  sayHello() {
+  protected sayHello() {
     console.log('Hello world!');
     
   }
@@ -9,16 +9,18 @@ class Superclass {
 }
 
 class Subclass extends Superclass {
-
+  sayHello2(): void {
+    this.sayHello();
+  }
 }
 
-const example = (ex: Superclass) => {
+const example = (ex: Subclass) => {
   ex.sayHello();
 }
 
 const superObject = new Superclass();
 
-example(superObject);
+// example(superObject);
 const sub = new Subclass();
 
 example(sub);
