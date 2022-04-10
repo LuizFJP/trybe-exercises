@@ -1,7 +1,7 @@
   // src/app.ts
 
   import express from 'express';
-  import routes from './routes';
+  import routes from '../src/routes/index.routes';
   import connection from './models/connection';
 
   class App {
