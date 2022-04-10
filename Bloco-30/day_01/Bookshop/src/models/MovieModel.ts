@@ -1,7 +1,7 @@
 import { model as createModel } from 'mongoose';
 import { MovieSchema, IMovie } from '../schemas/MovieSchema';
 
-class MovieMovel {
+class MovieModel {
 
   constructor(private _movieModel = createModel<IMovie>('movies', MovieSchema)) {}
 
@@ -10,3 +10,5 @@ class MovieMovel {
     return movies;
   }
 }
+
+export default MovieModel;
